@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Halstead Metrics Comparison</title>
+</head>
+<body>
+    <form method="post" action="{% url 'compare' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="file1">Choose File 1:</label>
+        <input type="file" name="file1" required><br>
+        <label for="file2">Choose File 2:</label>
+        <input type="file" name="file2" required><br>
+        <button type="submit">Compare Files</button>
+    </form>
+</body>
+</html>
